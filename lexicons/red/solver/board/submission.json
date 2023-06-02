@@ -1,0 +1,21 @@
+{
+    "lexicon": 1,
+    "id": "red.solver.board.submission",
+    "defs": {
+      "main": {
+        "type": "record",
+        "description": "A submission (for example app.bsky.feed.post) to a board",
+        "key": "tid",
+        "record": {
+          "type": "object",
+          "required": ["board", "subject", "createdAt"],
+          "properties": {
+            "board": {"type": "string", "format": "at-uri"},
+            "subject": {"type": "ref", "ref": "com.atproto.repo.strongRef"},
+            "createdAt": {"type": "string", "format": "datetime"}
+          }
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,51 @@
+{
+    "lexicon": 1,
+    "id": "red.solver.board.board",
+    "defs": {
+      "main": {
+        "type": "record",
+        "description": "Defines a board (very similar to a subreddit)",
+        "key": "any",
+        "record": {
+          "type": "object",
+          "required": ["did", "displayName", "createdAt"],
+          "properties": {
+            "displayName": {
+              "type": "string",
+              "maxGraphemes": 64,
+              "maxLength": 640
+            },
+            "summary": {
+              "type": "string",
+              "maxGraphemes": 128,
+              "maxLength": 1280
+            },
+            "description": {
+              "type": "string",
+              "maxGraphemes": 1024,
+              "maxLength": 10240
+            },
+            "descriptionFacets": {
+              "type": "array",
+              "items": {"type": "ref", "ref": "app.bsky.richtext.facet"}
+            },
+            "avatar": {
+              "type": "blob",
+              "accept": ["image/png", "image/jpeg"],
+              "maxSize": 1000000
+            },
+            "banner": {
+              "type": "blob",
+              "accept": ["image/png", "image/jpeg"],
+              "maxSize": 1000000
+            },
+            "feeds": {
+                "type": "array",
+                "items": {"type": "string", "format": "at-uri"}
+            },
+            "createdAt": {"type": "string", "format": "datetime"}
+          }
+        }
+      }
+    }
+  }

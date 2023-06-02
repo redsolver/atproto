@@ -1,0 +1,22 @@
+{
+    "lexicon": 1,
+    "id": "red.solver.board.comment",
+    "defs": {
+      "main": {
+        "type": "record",
+        "description": "A comment on a submission or comment",
+        "key": "tid",
+        "record": {
+          "type": "object",
+          "required": ["text", "root", "createdAt"],
+          "properties": {
+            "text": {"type": "string", "maxLength": 10000, "maxGraphemes": 10000},
+            "root": {"type": "ref", "ref": "com.atproto.repo.strongRef"},
+            "parent": {"type": "ref", "ref": "com.atproto.repo.strongRef"},            
+            "createdAt": {"type": "string", "format": "datetime"}
+          }
+        }
+      }
+    }
+  }
+  
