@@ -10,7 +10,7 @@ But let's start with an idea on how Reddit-style features could be built using o
 - Users can be banned from a subreddit by being blocked
 - Users can submit their post to one or multiple subreddits by mentioning the subreddit actor handle somewhere in their post
 - Comments are just replies on the post
-- Likes from members of a subreddit (following) are counted at upvotes for the subreddit-specific feeds
+- Likes from members of a subreddit (following) are counted as upvotes for the subreddit-specific feeds
 
 ### Advantages
 
@@ -50,7 +50,7 @@ A join record is created by an actor to join a board as a member. Deleting it le
 
 Users can submit submissions to boards if they are a member. Submissions do NOT contain text, images or other media directly. Instead, they reference another `subject`, which could be a Bluesky post or a record from another new lexicon, for example video. This architecture makes it possible to submit the same record to multiple boards without duplicating the content itself. It's also pretty powerful, because it could make anything from videos, podcasts to 3D models or books possible to be referenced and submitted without the board lexicon needing to be extended.
 
-In addition to the subject, submissions specific the URI of the `board` they are submitting to and a `createdAt` timestamp
+In addition to the subject, submissions specify the URI of the `board` they are submitting to and a `createdAt` timestamp
 
 ### Upvotes and downvotes
 
