@@ -10,7 +10,7 @@ All schemas are in the `lexicons/` directory of this repo.
 
 - Members can't delete votes, submissions, comments or leave a board if the board decides to not cooperate
 
-### Board
+## Board
 
 Subreddits are called boards. Every board needs a DID and ATProto repo.
 
