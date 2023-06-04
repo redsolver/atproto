@@ -8,9 +8,10 @@
         "key": "tid",
         "record": {
           "type": "object",
-          "required": ["board", "subject", "createdAt"],
+          "required": ["board", "author", "subject", "createdAt"],
           "properties": {
-            "board": {"type": "string", "format": "at-uri"},
+            "board": {"type": "string", "format": "did"},
+            "author": {"type": "string", "format": "did"},
             "subject": {"type": "ref", "ref": "com.atproto.repo.strongRef"},
             "createdAt": {"type": "string", "format": "datetime"}
           }

@@ -1,15 +1,23 @@
 {
   "lexicon": 1,
-  "id": "red.solver.board.downvote",
+  "id": "red.solver.board.vote",
   "defs": {
     "main": {
       "type": "record",
       "key": "tid",
       "record": {
         "type": "object",
-        "required": ["subject", "createdAt"],
+        "required": ["author", "subject", "direction", "createdAt"],
         "properties": {
+          "author": {"type": "string", "format": "did"},
           "subject": {"type": "ref", "ref": "com.atproto.repo.strongRef"},
+          "direction": {
+            "type": "string",
+            "knownValues": [
+              "up",
+              "down"
+            ]
+          },
           "createdAt": {"type": "string", "format": "datetime"}
         }
       }

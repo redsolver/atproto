@@ -1,0 +1,26 @@
+{
+  "lexicon": 1,
+  "id": "red.solver.board.member",
+  "defs": {
+    "main": {
+      "type": "record",
+      "key": "tid",
+      "record": {
+        "type": "object",
+        "required": ["member", "board", "createdAt"],
+        "properties": {
+          "member": {"type": "string", "format": "did"},
+          "board": {"type": "string", "format": "did"},
+          "role": {
+            "type": "string",
+            "knownValues": [
+              "moderator",
+              "admin"
+            ]
+          },
+          "createdAt": {"type": "string", "format": "datetime"}
+        }
+      }
+    }
+  }
+}

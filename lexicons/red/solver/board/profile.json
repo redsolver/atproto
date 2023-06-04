@@ -1,14 +1,14 @@
 {
     "lexicon": 1,
-    "id": "red.solver.board.board",
+    "id": "red.solver.board.profile",
     "defs": {
       "main": {
         "type": "record",
-        "description": "Defines a board (very similar to a subreddit)",
-        "key": "any",
+        "key": "literal:self",
+        "description": "Defines a board (very similar to a subreddit)",        
         "record": {
           "type": "object",
-          "required": ["did", "displayName", "createdAt"],
+          "required": ["displayName", "createdAt"],
           "properties": {
             "displayName": {
               "type": "string",

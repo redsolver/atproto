@@ -8,8 +8,9 @@
         "key": "tid",
         "record": {
           "type": "object",
-          "required": ["text", "root", "createdAt"],
+          "required": ["author", "text", "root", "createdAt"],
           "properties": {
+            "author": {"type": "string", "format": "did"},
             "text": {"type": "string", "maxLength": 10000, "maxGraphemes": 10000},
             "root": {"type": "ref", "ref": "com.atproto.repo.strongRef"},
             "parent": {"type": "ref", "ref": "com.atproto.repo.strongRef"},            
